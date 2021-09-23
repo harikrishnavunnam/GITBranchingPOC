@@ -1,0 +1,23 @@
+<apex:page standardController="case" extensions="caseattachment">
+    <apex:form id="frm">
+        <apex:pageBlock title="Case Edit">
+            <apex:pageBlockSection title="Case Information" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Case Owner"/>     
+                    <apex:outputlabel value="{!$User.FirstName} {!$User.LastName}"/>
+                </apex:pageBlockSectionItem>
+                    <apex:inputField value="{!objcase.Status}"/>
+                    <apex:inputField value="{!objcase.Type}"/>
+                    <apex:inputField value="{!objcase.Origin}"/>               
+            </apex:pageBlockSection>      
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!save}"/>
+        </apex:pageBlockButtons>       
+        <apex:pageBlockSection title="Uploading the Attachment" collapsible="false" dir="LTR" columns="1">
+        <div id="upload" class="upload">                                   
+            <apex:inputFile id="fileToUpload" value="{!fileBody}" filename="{!fileName}" styleClass="input-file"/>                            
+        </div> 
+         </apex:pageBlockSection>           
+       </apex:pageBlock>        
+    </apex:form>
+</apex:page>

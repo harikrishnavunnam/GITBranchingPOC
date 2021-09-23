@@ -1,0 +1,8 @@
+<apex:page standardController="Case" renderAs="pdf">
+<apex:pageBlock >
+{!Case.ID}
+{!Case.status}
+
+</apex:pageBlock>
+  
+</apex:page>
