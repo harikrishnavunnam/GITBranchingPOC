@@ -1,5 +1,4 @@
 public class AwesomeCalculator {
-    //test
     public static Double add(Double x, Double y) {
         calculatorServices.CalculatorImplPort calculator = 
             new calculatorServices.CalculatorImplPort();
